@@ -1,14 +1,9 @@
-@font-face {
-  font-family: Inter;
-  src: url(../fonts/Inter_18pt-Regular.ttf);
-}
+@import "./base.css";
 
-body {
-  background-color: #ff7b54;
-  color: #ffffff;
-  font-family: Inter, sans-serif;
+.home .main__heading {
+  font-size: 128px;
+  font-weight: bold;
 }
-a {
-  color: inherit;
-  text-decoration: none;
+.home .main__sub-heading {
+  font-size: 40px;
 }

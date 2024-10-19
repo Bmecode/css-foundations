@@ -1,0 +1,5 @@
+@import "./base.css";
+
+.shopping-cart-icon--primary g path{
+    fill: var(--color-primary);
+}

@@ -1,0 +1,98 @@
+:root {
+  --color-primary: #ff7b54;
+  --color-text-on-primary: #ffffff;
+  --color-button-border: var(--color-text-on-primary);
+  --color-button-primary-bg: var(--color-text-on-primary);
+  --color-button-primary-text: var(--color-primary);
+
+  --color-button-secondary-bg: var(--color-primary);
+  --color-button-secondary-text: var(--color-text-on-primary);
+
+  --font-family:"Inter", serif;
+}
+/* @font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter_18pt-Regular.ttf);
+} */
+body {
+  font-family: var(--font-family);
+}
+.body--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+.body--secondary {
+  background-color: var(--color-text-on-primary);
+  color: var(--color-primary);
+}
+
+.main {
+  padding: 150px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 34px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo nav shopping-cart";
+  align-items: center;
+  padding: 0 60px;
+}
+.header__link {
+  font-size: 40px;
+  font-weight: bold;
+}
+.nav {
+  display: inline-block;
+  justify-self: end;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav__list-item {
+  font-size: 20px;
+  margin-inline-end: 36px; /*Burada normalinde margin-right:36px yazıyoruz ama arapça gibi sağdan sola okunan dillerde margin right vermek istemeyiz bunların önüne geçmek için margin-inline-end i vererek dilin akış yönüne göre boşluk vermeliyiz.     */
+}
+.button {
+  font-size: 32px;
+  padding: 0 64px;
+  height: 100px;
+  border: 4px solid var(--color-button-border);
+  cursor: pointer;
+  transition: outline 0.2s linear;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:focus {
+  outline: 2px solid var(--color-text-on-primary);
+}
+.button--primary {
+  background: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+}
+.button--secondary {
+  background: var(--color-button-secondary-bg);
+  color: var(--color-button-secondary-text);
+}
+.button-container {
+  display: flex;
+  margin-top: 100px;
+}
+.button:not(button:last-of-type) {
+  margin-inline-end: 20px;
+}
+.button__icon {
+  vertical-align: middle;
+}
+/* psuedo classı kullanarak burada not bu haric diyerek butonun son elementine eriştik. */
