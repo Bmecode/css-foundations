@@ -1,6 +1,7 @@
 :root {
   --color-primary: #ff7b54;
   --color-text-on-primary: #ffffff;
+  --color-text-on-secondary: #000000;
   --color-button-border: var(--color-text-on-primary);
   --color-button-primary-bg: var(--color-text-on-primary);
   --color-button-primary-text: var(--color-primary);
@@ -8,7 +9,7 @@
   --color-button-secondary-bg: var(--color-primary);
   --color-button-secondary-text: var(--color-text-on-primary);
 
-  --font-family:"Inter", serif;
+  --font-family: "Inter", serif;
 }
 /* @font-face {
   font-family: Inter;
@@ -34,6 +35,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+h2,
 p {
   margin: 0;
 }
@@ -96,3 +98,48 @@ p {
   vertical-align: middle;
 }
 /* psuedo classı kullanarak burada not bu haric diyerek butonun son elementine eriştik. */
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .menu {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 33px 1fr 34px;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 1220px) {
+  .button {
+    font-size: 24px;
+    padding: 0 32px;
+    height: 70px;
+  }
+  .button img {
+    width: 20px;
+  }
+}
+@media (max-width: 815px) {
+  .main {
+    padding: 75px;
+  }
+}
+@media (max-width: 700px) {
+  .button {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+  .button-container {
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+}

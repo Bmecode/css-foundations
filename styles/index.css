@@ -7,3 +7,23 @@
 .home .main__sub-heading {
   font-size: 40px;
 }
+.home .menu path{
+  fill: var(--color-text-on-primary);
+}
+@media (max-width: 1220px) {
+  .home .main__heading {
+    font-size: 70px;
+  }
+  .home .main__sub-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 590px) {
+  .home .main__heading {
+    font-size: 40px;
+  }
+  .home .main__sub-heading {
+    font-size: 24px;
+  }
+}
