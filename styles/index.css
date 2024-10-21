@@ -7,7 +7,10 @@
 .home .main__sub-heading {
   font-size: 40px;
 }
-.home .menu path{
+.home .menu path {
+  fill: var(--color-text-on-primary);
+}
+.home .close path {
   fill: var(--color-text-on-primary);
 }
 @media (max-width: 1220px) {

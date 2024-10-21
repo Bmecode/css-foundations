@@ -26,7 +26,6 @@ body {
   background-color: var(--color-text-on-primary);
   color: var(--color-primary);
 }
-
 .main {
   padding: 150px;
 }
@@ -101,14 +100,48 @@ p {
 
 .menu {
   display: none;
+  cursor: pointer;
+}
+.close {
+  display: none;
+  cursor: pointer;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 840px) {
   .menu {
     display: block;
   }
-  .nav {
+  .menu--hide {
     display: none;
+  }
+  .close--open {
+    display: block;
+  }
+  .body--no-scroll {
+    overflow: hidden;
+  }
+
+  .nav {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-primary);
+    top: 60px;
+    left: -100%;
+    padding-top: 60px;
+    transition: left 0.2s linear;
+  }
+  .nav--visible {
+    left: 0;
+  }
+  .nav__list {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+  }
+  .nav__list-item {
+    font-size: 60px;
+    font-weight: bold;
   }
   .header {
     display: grid;
